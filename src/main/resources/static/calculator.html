@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="outer-container">
+        <div class="middle-container">
+            <div class="inner-container">
+                <h1>Grade Calculator</h1>
+                <div class="content">
+                 
+                    <div class="activities">
+                        <h2>Activities</h2>
+                        <p>Give grades to the numeric activities:</p>
+                        <table id="activities-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Short Name</th>
+                                    <th>Weight</th>
+                                    <th>Grade</th>
+                                    <th>Percent</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Activity 1</td>
+                                    <td>A1</td>
+                                    <td><input type="text" name="weight"></td>
+                                    <td><input type="text" name="grade"> / <input type="text" name="total" oninput="updatePercent(this)"></td>
+                                    <td><span name="percent"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="add-row" onclick="addRow()">ADD ROW</button>
+                    </div>
+                    <div class="result">
+                        <h2>Result</h2>
+                        <div class="buttons">
+                            <button class="weighted" onclick="calculateWeighted()">WEIGHTED</button>
+                            <button class="mean" onclick="calculateMean()">MEAN</button>
+                        </div>
+                        <div id="result-display"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>

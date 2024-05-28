@@ -1,0 +1,131 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #74151B;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top */
+}
+
+.outer-container {
+    background-color: #3D3935;
+    padding: 20px 0px 20px;
+    margin-top: 0; 
+    box-shadow: -3px 3px 8px #272727
+}
+
+/* .middle-container {
+    background-color: black;
+    padding: 10px;
+} */
+.inner-container {
+    background-color: white;
+    padding: 80px 160px 20px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+.content {
+    background-color: #E8EFF1;
+    padding: 0px 20px 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+
+.activities {
+    margin-bottom: 20px;
+}
+
+.activities h2 {
+    color: #b11226;
+    margin-bottom: 10px;
+}
+
+.activities p {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #eee;
+}
+
+input[type="text"] {
+    width: 20%;
+    padding: 5px;
+    box-sizing: content-box;
+}
+
+button {
+    background-color: #f0f0f0;
+    color: #000;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+.add-row {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid #000000;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.weighted, .mean {
+    background-color: #b11226;
+    color: #fff;
+}
+
+.weighted:hover, .mean:hover {
+    background-color: #a00;
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.result h2 {
+    color: #b11226;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    text-align: right;
+}
+
+#result-display {
+    margin-top: 10px;
+    font-size: 18px;
+}
