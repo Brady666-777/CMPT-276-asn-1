@@ -1,10 +1,8 @@
 FROM eclipse-temurin:21 AS build
+COPY . .
+RUN mvn clean package -DskipTests
 
-RUN mkdir /opt/app
-COPY japp.jar /opt/app
-CMD ["java", "-jar", "/opt/app/japp.jar"]
-
-FROM eclipse-temurin:8u412-b08-jre-windowsservercore-ltsc2022
-COPY --from=build /opt/app/japp.jar /opt/app/japp.jar
+FROM eclipse-temurin:21-jdk
+COPY --from=build /target/asn1-0.0.1-SNAPSHOT.jar asn1.jar
 EXPOSE 8080
-ENTERYPOINT ["java", "-jar", "/opt/app/japp.jar"]
+ENTRYPOINT ["java","-jar","demo.jar"]
