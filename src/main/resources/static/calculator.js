@@ -20,6 +20,11 @@ function updatePercent(element) {
     const gradeInput = element.parentElement.getElementsByTagName('input')[0].value;
     const totalInput = element.value;
 
+     // Input validation
+     if (isNaN(gradeInput) || isNaN(totalInput)) {
+        alert("Input invalid, please try again.");
+        return;
+    }
     const percentSpan = element.parentElement.parentElement.getElementsByTagName('span')[0];
     if (totalInput && gradeInput) {
         const percent = (gradeInput / totalInput) * 100;
@@ -66,6 +71,12 @@ function calculateWeighted() {
         const weight = parseFloat(weights[i].value);
         const grade = parseFloat(grades[i].value);
         const total = parseFloat(totals[i].value);
+
+                // Input validation
+        if (isNaN(weight) || isNaN(grade) || isNaN(total)) {
+            alert("correct your weight to continue.");
+            return;
+        }
 
         if (!isNaN(weight) && !isNaN(grade) && !isNaN(total)) {
             weightedSum += (grade / total) * weight;
